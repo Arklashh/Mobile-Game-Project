@@ -12,7 +12,7 @@ public class Human : Character
     }
 }
 
-public class Elf : Character
+public class Dwarf : Character
 {
     public float newJumpHeight = 15f;
 
