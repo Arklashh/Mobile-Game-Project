@@ -8,8 +8,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: _speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: _joystick
       value: 
+      objectReference: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: GroundCheckRadius
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_RootOrder
@@ -61,3 +69,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+--- !u!1 &5474187903727590511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+  m_PrefabInstance: {fileID: 6000297323502479388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5568546732417788886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474187903727590511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e3c096bd5107e4386d17ac345f938f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Human: {fileID: 5474187903727590511}
+  Dwarf: {fileID: 1012998539636588556, guid: 87b3db018606ff94cbcff0e02aec6a8e, type: 3}
+  Robot: {fileID: 4860304502597887381, guid: 12b0dd7f731285c4ca4d69fd6f93978c, type: 3}
