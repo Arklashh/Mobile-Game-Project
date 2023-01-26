@@ -12,6 +12,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: _joystick
       value: 
       objectReference: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}

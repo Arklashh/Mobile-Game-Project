@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-[RequireComponent(typeof(Rigidbody), typeof (BoxCollider))]
+[RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 public class Character : MonoBehaviour
 {
     private FixedJoystick _joystick;
@@ -27,11 +27,19 @@ public class Character : MonoBehaviour
 
     private bool _grounded;
 
+    public Rigidbody Rigidbody;
+
     virtual protected void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
         _joystick = FindObjectOfType<FixedJoystick>();
+        Rigidbody = GetComponent<Rigidbody>();
+    }
+
+    public Rigidbody GetRigidbody()
+    {
+        return Rigidbody;
     }
 
     virtual protected void FixedUpdate()

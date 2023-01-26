@@ -127,6 +127,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8716758800176015730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012998539636588556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5d908f43db8534a94a553ce17ae41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalSpeed: 6
+  SpeedBoosted: 15
+  EnrageButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
 --- !u!114 &-8455360001489813227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +163,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   GroundCheckRadius: 0.1
+  Rigidbody: {fileID: 0}

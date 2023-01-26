@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2961c8611b955e42b5226f1f4882776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
+  MoveSpeed: 15
   StickToGroundForce: 10
   Gravity: 10
   JumpForce: 10
@@ -155,6 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   GroundCheckRadius: 0.1
+  Rigidbody: {fileID: 0}
 --- !u!114 &7681063074603855788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginalSpeed: 10
   SpeedBoosted: 20
-  speedButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
+  SpeedButton: {fileID: 0}
 --- !u!4 &8442029290136196998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2437060625171721727, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
