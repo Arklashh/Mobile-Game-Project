@@ -51,9 +51,15 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void OnJumpButtonPressed()
+    {
+        _verticalVelocity = JumpForce;
+    }
+
     private void Update()
     {
         Jump();
+        OnJumpButtonPressed();
     }
 
     public void Jump()

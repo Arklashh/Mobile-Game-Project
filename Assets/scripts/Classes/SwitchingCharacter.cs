@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchingCharacter : MonoBehaviour
 {
-    public GameObject Human;
-    public GameObject Dwarf;
-    public GameObject Robot;
+    public GameObject Player;
+    public GameObject HumanPrefab;
+    public GameObject DwarfPrefab;
+    public GameObject RobotPrefab;
+    public Button HumanButton;
+    public Button DwarfButton;
+    public Button RobotButton;
 
-    void Update()
+    void Start()
     {
-        GameObject player = GameObject.Find("Player");
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Destroy(player);
-            player = Instantiate(Human);
-            player.name = "Player";
-            //player.AddComponent<FixedJoystick>();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Destroy(player);
-            player = Instantiate(Dwarf);
-            player.name = "Player";
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            Destroy(player);
-            player = Instantiate(Robot);
-            player.name = "Player";
-        }
+        if (HumanButton != null)
+            HumanButton.onClick.AddListener(() => SwitchCharacter(HumanPrefab));
+        if (DwarfButton != null)
+            DwarfButton.onClick.AddListener(() => SwitchCharacter(DwarfPrefab));
+        if (RobotButton != null)
+            RobotButton.onClick.AddListener(() => SwitchCharacter(RobotPrefab));
+    }
 
+
+    void SwitchCharacter(GameObject prefab)
+    {
+        Destroy(Player);
+        Player = Instantiate(prefab);
     }
 }
 
