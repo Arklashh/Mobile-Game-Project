@@ -74,7 +74,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
   m_PrefabInstance: {fileID: 6000297323502479388}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5568546732417788886
+--- !u!114 &8124021540006840461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,9 +83,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5474187903727590511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e3c096bd5107e4386d17ac345f938f, type: 3}
+  m_Script: {fileID: 11500000, guid: b14b472446d696a4d9e1353c32838626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Human: {fileID: 5474187903727590511}
-  Dwarf: {fileID: 1012998539636588556, guid: 87b3db018606ff94cbcff0e02aec6a8e, type: 3}
-  Robot: {fileID: 4860304502597887381, guid: 12b0dd7f731285c4ca4d69fd6f93978c, type: 3}
+  dashSpeed: 10
+  cooldown: 2
+  DashButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}

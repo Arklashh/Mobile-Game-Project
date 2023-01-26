@@ -155,7 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   GroundCheckRadius: 0.1
---- !u!114 &1120912555
+--- !u!114 &7681063074603855788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,12 +164,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4860304502597887381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e3c096bd5107e4386d17ac345f938f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e926cd04ec70f64583a494aa976e0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Human: {fileID: 5474187903727590511, guid: 778e9a0df0e05014b902edf7dc1b8bcd, type: 3}
-  Dwarf: {fileID: 1012998539636588556, guid: 87b3db018606ff94cbcff0e02aec6a8e, type: 3}
-  Robot: {fileID: 4860304502597887381}
+  OriginalSpeed: 10
+  SpeedBoosted: 20
+  speedButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
 --- !u!4 &8442029290136196998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2437060625171721727, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
