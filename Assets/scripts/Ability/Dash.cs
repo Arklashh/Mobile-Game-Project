@@ -5,19 +5,28 @@ using UnityEngine.UI;
 
 public class Dash : MonoBehaviour
 {
+    // Speed of the dash
     public float dashSpeed = 10f;
+    // Rigidbody component of the object
     private Rigidbody rb;
-    public float cooldown = 2f; // the amount of time in seconds before the player can dash again
-    private float timer; // timer variable to keep track of the last dash
+    // Cooldown time for the dash
+    public float cooldown = 2f;
+    // Timer for the cooldown
+    private float timer;
 
-    public Button DashButton; // assign the button in the inspector
+    // Dash button
+    public Button DashButton;
 
     private void Start()
     {
+        // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
-        timer = cooldown; // initialize the timer with the cooldown value
+        // Set the timer to the cooldown
+        timer = cooldown;
+        // Find the Dash button
         DashButton = GameObject.Find("AbilityButton").GetComponent<Button>();
 
+        // Add a listener to the button to activate the dash when clicked
         if (DashButton != null)
         {
             DashButton.onClick.AddListener(PerformDash);
@@ -26,20 +35,27 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
+        // Check if the timer is less than the cooldown
         if (timer < cooldown)
         {
-            timer += Time.deltaTime; // increment the timer
+            // Increase the timer
+            timer += Time.deltaTime;
         }
     }
 
+    // Function to perform the dash
     private void PerformDash()
     {
+        // Check if the cooldown is finished
         if (timer >= cooldown)
         {
             Debug.Log("Dash");
+            // Move the object forward
             transform.Translate(transform.forward * dashSpeed * Time.deltaTime, Space.World);
-            timer = 0; // reset the timer
+            // Reset the timer
+            timer = 0;
         }
     }
 }
+
 
