@@ -522,7 +522,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1224143236}
         m_TargetAssemblyTypeName: SaveScript, Assembly-CSharp
-        m_MethodName: SaveInt
+        m_MethodName: SaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -735,6 +735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentLevel: 0
+  PlayerName: 
+  SavedString: 
 --- !u!1 &1453486957
 GameObject:
   m_ObjectHideFlags: 0
