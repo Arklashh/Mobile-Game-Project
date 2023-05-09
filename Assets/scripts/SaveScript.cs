@@ -1,71 +1,79 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using System.IO;
 
 public class SaveScript : MonoBehaviour
 {
-
-    // Public variables to be saved
     public int CurrentLevel = 0;
-    public string PlayerName = "";
     public string SavedString = "";
 
-    private void Start()
+    public void Start()
     {
-        // Load saved values when the script starts
-        LoadInt();
         LoadSave();
-    }
-
-    // Update is called once per frame
-    public void SaveInt()
-    {
-        // Save the int value of CurrentLevel and the string value of PlayerName to PlayerPrefs
-        PlayerPrefs.SetInt("CurrentLevel", CurrentLevel);
-        PlayerPrefs.SetString("PlayerName", PlayerName);
-    }
-
-    public void LoadInt()
-    {
-        // Load the int value of CurrentLevel and the string value of PlayerName from PlayerPrefs
-        CurrentLevel = PlayerPrefs.GetInt("CurrentLevel");
-        PlayerName = PlayerPrefs.GetString("PlayerName");
+        LoadInt();
     }
 
     public void SaveGame()
     {
         print("Saving Game");
-        // Check if the save directory exists, if not, create it
+        // Check if the persistent data path exists.
         if (!Directory.Exists(Application.persistentDataPath))
         {
+            // If not, create the directory.
             Directory.CreateDirectory(Application.persistentDataPath);
             print("Creating save path;" + Application.persistentDataPath);
         }
-        // Check if the save file exists, if not, create it
-        if (!File.Exists(Application.dataPath + "/save.sav"))
+        // Try to save the file.
+        try
         {
-            using (StreamWriter sw = File.CreateText(Application.persistentDataPath + "/save.sav")) ;
-            print("Creating file: " + Application.persistentDataPath + "/Save.sav");
+            // Check if the save file exists.
+            if (!File.Exists(Application.dataPath + "/save.sav"))
+            {
+                // If not, create the file.
+                using (StreamWriter sw = File.CreateText(Application.persistentDataPath + "/save.sav"))
+                    print("Creating file: " + Application.persistentDataPath + "/Save.sav");
+            }
+            // Convert the string "Hello World" to bytes and then to a base64 string.
+            var plainBytes = System.Text.Encoding.UTF8.GetBytes("Hello World");
+            SavedString = Convert.ToBase64String(plainBytes);
+            // Write the base64 string to the save file.
+            File.WriteAllText(Application.persistentDataPath + "/save.sav", SavedString);
         }
-
-        // Encode the string value of SavedString to a byte array
-        var plainBytes = System.Text.Encoding.UTF8.GetBytes("Hello World");
-        // Convert the byte array to a base64 string
-        SavedString = System.Convert.ToBase64String(plainBytes);
-
-        // Write the base64 string to the save file
-        File.WriteAllText(Application.persistentDataPath + "/save.sav", SavedString);
+        // Catch any exceptions and print an error message.
+        catch (Exception e)
+        {
+            print("Error saving file: " + e.Message);
+        }
     }
-
     void LoadSave()
     {
-        // Read the contents of the save file as a base64 string
-        var encodedBytes = System.Convert.FromBase64String(File.ReadAllText(Application.persistentDataPath + "/save.sav"));
-        // Decode the base64 string to a string
-        SavedString = System.Text.Encoding.UTF8.GetString(encodedBytes);
-
-        print("Save Loaded" + SavedString);
+        // Try to load the saved string.
+        try
+        {
+            // Convert the base64 string in the save file to a regular string.
+            var encodedBytes = System.Convert.FromBase64String(File.ReadAllText(Application.persistentDataPath + "/save.sav"));
+            SavedString = System.Text.Encoding.UTF8.GetString(encodedBytes);
+            // Print a message indicating that the save was loaded.
+            print("Save Loaded" + SavedString);
+        }
+        // Catch a FileNotFoundException and print an error message.
+        catch (FileNotFoundException e)
+        {
+            print("Save file not found" + e.Message);
+        }
     }
+
+    void LoadInt()
+    {
+        CurrentLevel = PlayerPrefs.GetInt("CurrentLevel");
+    }
+
+    void SaveInt()
+    {
+        PlayerPrefs.SetInt("CurrentLevel", CurrentLevel);
+    }
+
 }
 
