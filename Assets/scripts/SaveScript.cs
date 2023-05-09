@@ -47,7 +47,7 @@ public class SaveScript : MonoBehaviour
             print("Error saving file: " + e.Message);
         }
     }
-    void LoadSave()
+    public void LoadSave()
     {
         // Try to load the saved string.
         try
