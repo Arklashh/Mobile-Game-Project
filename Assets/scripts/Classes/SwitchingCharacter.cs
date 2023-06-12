@@ -47,15 +47,10 @@ public class SwitchingCharacter : MonoBehaviour
 
         // Find the jump button in the new player object
         Button jumpButton = Player.GetComponentInChildren<Button>();
-
+        
         // Attach the Jump method to the jump button's onClick event
         if (jumpButton != null)
-        {
             jumpButton.onClick.AddListener(character.Jump);
-
-            // Attach the new instantiated prefab to the JumpButton element
-            Player.transform.SetParent(jumpButton.transform, false);
-        }
     }
 }
 
