@@ -56,7 +56,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2437060625171721727, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 2437060625171721727, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -124,8 +124,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.7858608, z: 1}
+  m_Center: {x: 0, y: 0.9100772, z: 0}
 --- !u!33 &1417349192
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -147,15 +147,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 15
-  StickToGroundForce: 10
+  StickToGroundForce: 5
   Gravity: 10
-  JumpForce: 10
+  JumpForce: 7
   GroundCheck: {fileID: 2870968827104913763}
   GroundLayers:
     serializedVersion: 2
     m_Bits: 64
-  GroundCheckRadius: 0.1
-  Rigidbody: {fileID: 0}
+  GroundCheckRadius: 0.5
+  Rigidbody: {fileID: 7816404284399462937, guid: ff7d7d36a847b4c4c9473e031cfb210d, type: 3}
+--- !u!114 &136687232551411635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860304502597887381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1445be3fee383484e9bf778123e1dac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7681063074603855788
 MonoBehaviour:
   m_ObjectHideFlags: 0

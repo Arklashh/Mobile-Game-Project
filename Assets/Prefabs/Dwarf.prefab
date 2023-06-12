@@ -52,7 +52,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161788898430874, guid: 2bdbc34c6abe44717aca1013ebad4f6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4161788898430874, guid: 2bdbc34c6abe44717aca1013ebad4f6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125,8 +125,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.3478274, z: 1}
+  m_Center: {x: 0, y: 0.7142087, z: 0}
 --- !u!114 &-8716758800176015730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,12 +155,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 6
-  StickToGroundForce: 10
+  StickToGroundForce: 5
   Gravity: 10
-  JumpForce: 10
+  JumpForce: 7
   GroundCheck: {fileID: 342906432}
   GroundLayers:
     serializedVersion: 2
     m_Bits: 64
-  GroundCheckRadius: 0.1
-  Rigidbody: {fileID: 0}
+  GroundCheckRadius: 0.5
+  Rigidbody: {fileID: 6000297322577932205, guid: 778e9a0df0e05014b902edf7dc1b8bcd, type: 3}
+--- !u!114 &-420616291095312158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012998539636588556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1445be3fee383484e9bf778123e1dac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

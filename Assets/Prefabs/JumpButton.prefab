@@ -257,9 +257,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7816404284399462919, guid: ff7d7d36a847b4c4c9473e031cfb210d, type: 3}
         m_TargetAssemblyTypeName: Character, Assembly-CSharp
-        m_MethodName: OnJumpButtonPressed
+        m_MethodName: Jump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

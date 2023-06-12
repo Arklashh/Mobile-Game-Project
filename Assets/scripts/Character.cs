@@ -32,7 +32,7 @@ public class Character : MonoBehaviour
     public float GroundCheckRadius;
 
     //Variable to store if the character is grounded
-    private bool _grounded;
+    private bool _grounded = true;
 
     //Reference to the Rigidbody component
     public Rigidbody Rigidbody;
@@ -79,29 +79,16 @@ public class Character : MonoBehaviour
         _verticalVelocity = JumpForce;
     }
 
-    private void Update()
-    {
-        Jump();
-        OnJumpButtonPressed();
-    }
-
     //Method for handling jumping
     public void Jump()
     {
+        
         //If the character is grounded, set the vertical velocity to the jump force
         if (_grounded)
         {
             _verticalVelocity = JumpForce;
+            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, _verticalVelocity, _rigidbody.velocity.z);
 
-        }
-
-        if (_grounded && _verticalVelocity <= 0)
-        {
-            _verticalVelocity = -StickToGroundForce * Time.deltaTime;
-        }
-        else
-        {
-            _verticalVelocity -= Gravity * Time.deltaTime;
         }
     }
 }
