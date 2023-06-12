@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class SwitchingCharacter : MonoBehaviour
 {
-    //A reference to the current player object 
+    // A reference to the current player object 
     public GameObject Player;
-    //Prefab references to the different characters
+
+    // Prefab references to the different characters
     public GameObject HumanPrefab;
     public GameObject DwarfPrefab;
     public GameObject RobotPrefab;
-    //References to the UI buttons for switching characters
+
+    // References to the UI buttons for switching characters
     public Button HumanButton;
     public Button DwarfButton;
     public Button RobotButton;
 
     void Start()
     {
-        //Assigns the SwitchCharacter method to the onClick event for each button
+        // Assign the SwitchCharacter method to the onClick event for each button
         if (HumanButton != null)
             HumanButton.onClick.AddListener(() => SwitchCharacter(HumanPrefab));
         if (DwarfButton != null)
@@ -27,13 +29,33 @@ public class SwitchingCharacter : MonoBehaviour
             RobotButton.onClick.AddListener(() => SwitchCharacter(RobotPrefab));
     }
 
-    //Method for switching the character
+    // Method for switching the character
     void SwitchCharacter(GameObject prefab)
     {
-        //Destroys the current player object
+        // Store the current position and rotation
+        Vector3 currentPosition = Player.transform.position;
+        Quaternion currentRotation = Player.transform.rotation;
+
+        // Destroy the current player object
         Destroy(Player);
-        //Instantiates the new character prefab
-        Player = Instantiate(prefab);
+
+        // Instantiate the new character prefab
+        Player = Instantiate(prefab, currentPosition, currentRotation);
+
+        // Get the Character component from the newly instantiated prefab
+        Character character = Player.GetComponent<Character>();
+
+        // Find the jump button in the new player object
+        Button jumpButton = Player.GetComponentInChildren<Button>();
+
+        // Attach the Jump method to the jump button's onClick event
+        if (jumpButton != null)
+        {
+            jumpButton.onClick.AddListener(character.Jump);
+
+            // Attach the new instantiated prefab to the JumpButton element
+            Player.transform.SetParent(jumpButton.transform, false);
+        }
     }
 }
 
