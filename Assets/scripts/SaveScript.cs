@@ -1,20 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using System.IO;
+using System;
 
 public class SaveScript : MonoBehaviour
 {
+    // Public integer to store the current level.
     public int CurrentLevel = 0;
+
+    // Public string to store the saved string.
     public string SavedString = "";
 
-    public void Start()
+    // Start function is called when the script is first run.
+    private void Start()
     {
-        LoadSave();
+        // Load the integer.
         LoadInt();
+        // Load the saved string.
+        LoadSave();
     }
 
+    // SaveInt method saves the current level as an integer to PlayerPrefs.
+    public void SaveInt()
+    {
+        PlayerPrefs.SetInt("CurrentLevel", CurrentLevel);
+    }
+
+    // LoadInt method loads the saved integer from PlayerPrefs.
+    public void LoadInt()
+    {
+        CurrentLevel = PlayerPrefs.GetInt("CurrentLevel");
+    }
+
+    // SaveGame method saves the saved string to a file.
     public void SaveGame()
     {
         print("Saving Game");
@@ -47,7 +66,9 @@ public class SaveScript : MonoBehaviour
             print("Error saving file: " + e.Message);
         }
     }
-    public void LoadSave()
+
+    // LoadSave method loads the saved string from the file.
+    void LoadSave()
     {
         // Try to load the saved string.
         try
@@ -64,16 +85,5 @@ public class SaveScript : MonoBehaviour
             print("Save file not found" + e.Message);
         }
     }
-
-    void LoadInt()
-    {
-        CurrentLevel = PlayerPrefs.GetInt("CurrentLevel");
-    }
-
-    void SaveInt()
-    {
-        PlayerPrefs.SetInt("CurrentLevel", CurrentLevel);
-    }
-
 }
 
