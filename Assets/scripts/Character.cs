@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
 {
     // Variable to store the joystick reference
     private FixedJoystick _joystick;
+    private JumpButton jumpButton;
 
     // Variable to store the move speed of the character
     [SerializeField] public float MoveSpeed;
@@ -45,6 +46,7 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _joystick = FindObjectOfType<FixedJoystick>();
         Rigidbody = GetComponent<Rigidbody>();
+        jumpButton = FindObjectOfType<JumpButton>();
     }
 
     // Method to get the reference to the Rigidbody component
@@ -72,6 +74,10 @@ public class Character : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);
         }
+        if (jumpButton.CanJump())
+        {
+            Jump();
+        }   
     }
 
     // Method for handling jumping

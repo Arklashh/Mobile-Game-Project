@@ -83,7 +83,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ground check
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1021,6 +1021,10 @@ GameObject:
   - component: {fileID: 1223395249}
   - component: {fileID: 1223395248}
   - component: {fileID: 1223395247}
+  - component: {fileID: -4153659704776285039}
+  - component: {fileID: 8124021540006840461}
+  - component: {fileID: 2031981060}
+  - component: {fileID: 8124021540548180255}
   m_Layer: 0
   m_Name: HumanMale_Character_FREE
   m_TagString: Untagged
@@ -1094,8 +1098,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.9079063, z: 1}
+  m_Center: {x: 0, y: 1.096852, z: 0}
 --- !u!114 &1223395247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,18 +1112,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2961c8611b955e42b5226f1f4882776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 1223395249}
-  _joystick: {fileID: 0}
-  _animator: {fileID: 4540229000190281644}
-  MoveSpeed: 6
-  StickToGroundForce: 10
+  MoveSpeed: 10
+  StickToGroundForce: 5
   Gravity: 10
-  JumpForce: 10
+  JumpForce: 7
   GroundCheck: {fileID: 1266955555}
   GroundLayers:
     serializedVersion: 2
     m_Bits: 64
-  GroundCheckRadius: 1
+  GroundCheckRadius: 0.5
+  Rigidbody: {fileID: 1223395249}
+--- !u!114 &-4153659704776285039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782702501690864755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1445be3fee383484e9bf778123e1dac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8124021540006840461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782702501690864755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14b472446d696a4d9e1353c32838626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 10
+  cooldown: 2
+  DashButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
+--- !u!114 &2031981060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782702501690864755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1445be3fee383484e9bf778123e1dac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8124021540548180255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782702501690864755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14b472446d696a4d9e1353c32838626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 10
+  cooldown: 2
+  DashButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
 --- !u!1 &1789272960074739661
 GameObject:
   m_ObjectHideFlags: 0

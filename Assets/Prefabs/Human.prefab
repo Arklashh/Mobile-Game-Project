@@ -7,42 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: _speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: JumpForce
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: MoveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: Rigidbody
-      value: 
-      objectReference: {fileID: 7816404284399462937, guid: ff7d7d36a847b4c4c9473e031cfb210d, type: 3}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: _joystick
-      value: 
-      objectReference: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: GroundCheckRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395247, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: StickToGroundForce
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395248, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8994441
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223395248, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      propertyPath: m_Center.y
-      value: 0.96409965
-      objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -93,35 +57,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
---- !u!1 &5474187903727590511 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-  m_PrefabInstance: {fileID: 6000297323502479388}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-4153659704776285039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5474187903727590511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1445be3fee383484e9bf778123e1dac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8124021540006840461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5474187903727590511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14b472446d696a4d9e1353c32838626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 10
-  cooldown: 2
-  DashButton: {fileID: 2037698629503436724, guid: 6dd42ddeefb0ba1458109abb7e613928, type: 3}
